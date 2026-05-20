@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "background": "#fcfaf6",
+    "width":400,
+    "height":420,
+    "description": "Dot plot of total protected area by state",
+    "data": {"values": [
+      {"Jurisdiction": "ACT", "ProtectedArea": 40657},
+      {"Jurisdiction": "TAS", "ProtectedArea": 2928055},
+      {"Jurisdiction": "VIC", "ProtectedArea": 4023548},
+      {"Jurisdiction": "NSW", "ProtectedArea": 8365056},
+      {"Jurisdiction": "QLD", "ProtectedArea": 16183153},
+      {"Jurisdiction": "SA", "ProtectedArea": 29963518},
+      {"Jurisdiction": "NT", "ProtectedArea": 33208738},
+      {"Jurisdiction": "WA", "ProtectedArea": 78674219}
+    ]},
+    "mark": {"type":"point",
+    "filled":true
+    },
+    "encoding": {
+      "x": {"field": "ProtectedArea", "type": "quantitative","axis": {"values": [0, 20000000, 40000000, 60000000, 80000000]}},
+      "y": {"field": "Jurisdiction", "type": "nominal"},
+      "tooltip":[
+        {"field": "Jurisdiction", "type": "nominal", "title": "State"},
+        {"field": "ProtectedArea", "type": "quantitative", "title": "Area (km²)"}
+      ]
+    }
+  }

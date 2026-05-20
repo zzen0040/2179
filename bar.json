@@ -1,0 +1,41 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "background": "#fcfaf6",
+    "width":400,
+    "height":420,
+    "description": "Bar chart with text labels. Set domain to make the frame cover the labels.",
+    "data": {
+     "values": [ 
+    {"Jurisdiction":"ACT","Number":51},
+    {"Jurisdiction":"NT","Number":84},
+    {"Jurisdiction":"QLD","Number":1230},
+    {"Jurisdiction":"TAS","Number":1721},
+    {"Jurisdiction":"WA","Number":1888},
+    {"Jurisdiction":"SA","Number":2085},
+    {"Jurisdiction":"NSW","Number":2657},
+    {"Jurisdiction":"VIC","Number":4709}
+  ]
+    },
+    "encoding": {
+      "y": {"field":"Jurisdiction","type":"nominal"},
+      "x": {"field": "Number", "type": "quantitative"},
+    "color": {
+    "field": "Jurisdiction",
+    "type": "nominal"
+    }
+    },
+    "layer": [{
+      "mark": "bar"
+    }, {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3
+      },
+      "encoding": {
+        "text": {"field": "Number", "type": "quantitative"}
+      }
+    }]
+  }
+  
