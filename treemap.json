@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v6.json",
+    "description": "An example of treemap layout for hierarchical data.",
+    "width": 960,
+    "height": 500,
+    "padding": 2.5,
+    "autosize": "none",
+
+    "data": [
+      {
+        "name": "tree",
+        "values": [
+            {"id": "root", "parent": null, "name": "NRS", "value": 0},
+            {"id": "Community", "parent": "root", "name": "Community", "value": 49.48},
+            {"id": "Government", "parent": "root", "name": "Government", "value": 38.35},
+            {"id": "Joint", "parent": "root", "name": "Joint", "value": 6.06},
+            {"id": "Private", "parent": "root", "name": "Private", "value": 6.11}
+          ],    
+        "transform": [
+          {
+            "type": "stratify",
+            "key": "id",
+            "parentKey": "parent"
+          },
+          {
+            "type": "treemap",
+            "field": "value",
+            "sort": {"field": "value"},
+            "round": true,
+            "method": "squarify",
+            "size": [{"signal": "width"}, {"signal": "height"}]
+          }
+        ]
+      },
+      {
+        "name": "leaves",
+        "source": "tree",
+        "transform": [{ "type": "filter", "expr": "!datum.children" }]
+      }
+    ],
+    "scales": [
+      {
+        "name": "color",
+        "type": "ordinal",
+        "domain": ["Community", "Government", "Joint", "Private"],
+        "range": [
+          "#2d6a4f", "#40916c", "#b7e4c7", "#74c69d"
+        ]
+      }
+    ],
+  
+    "marks": [
+      {
+        "type": "rect",
+        "from": {"data": "leaves"},
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "fill": {"scale": "color", "field": "name"}
+          },
+          "update": {
+            "x": {"field": "x0"},
+            "y": {"field": "y0"},
+            "x2": {"field": "x1"},
+            "y2": {"field": "y1"}
+          }
+        }
+      },
+      {
+        "type": "text",
+        "from": {"data": "leaves"},
+        "interactive": false,
+        "encode": {
+          "enter": {
+            "font": {"value": "Helvetica Neue, Arial"},
+            "align": {"value": "center"},
+            "baseline": {"value": "middle"},
+            "fill": {"value": "#000"},
+            "text": {"signal": "datum.name + '\\n' + datum.value + '%'"},
+            "fontSize": {"value": 18},
+            "fillOpacity": {"value":1}
+          },
+          "update": {
+            "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+            "y": {"signal": "0.5 * (datum.y0 + datum.y1)"}
+          }
+        }
+      }
+    ]
+  }

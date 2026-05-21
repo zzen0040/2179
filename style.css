@@ -5,6 +5,10 @@ body {
     background-color: #f7f3eb;
     margin: 0;
   }
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
 
   
   /*TITLE*/
@@ -49,8 +53,6 @@ body {
   .section1 {
     margin-top: 20px;
     margin-bottom: 100px;
-    max-width: 1600px;
-    margin: 0 auto;
 }
 .section1 h2 {
   margin-bottom: 20px;
