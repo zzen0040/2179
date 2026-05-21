@@ -71,6 +71,16 @@ body {
   margin-bottom: 15px;
   text-align: center;
 }
+.section2 {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+.section2 h2 {
+margin-bottom: 20px;
+  font-size: 42px;
+  text-align: center;
+  color: black;
+}
   /*FOOTER */
   
   .footer {

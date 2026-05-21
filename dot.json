@@ -1,0 +1,47 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  
+    "width": 700,
+    "height": 500,
+  
+    "data": {
+      "url": "data/IBRA.csv"
+    },
+  
+    "mark": {
+      "type": "point",
+      "filled": true,
+      "opacity": 0.7
+    },
+  
+    "encoding": {
+  
+      "x": {
+        "field": "7",
+        "type": "quantitative"
+      },
+  
+      "y": {
+        "field": "6",
+        "type": "quantitative"
+      },
+  
+      "size": {
+        "field": "5",
+        "type": "quantitative"
+      },
+  
+      "color": {
+        "field": "3",
+        "type": "nominal"
+      },
+  
+      "tooltip": [
+        {"field": "1"},
+        {"field": "3"},
+        {"field": "7"},
+        {"field": "6"},
+        {"field": "5"}
+      ]
+    }
+  }
