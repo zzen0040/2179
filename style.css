@@ -59,6 +59,8 @@ body {
 .section1_charts {
   display: flex;
   gap: 100px;
+  justify-content: center;
+  padding: 0 40px;
 }
   /*FOOTER */
   
