@@ -27,9 +27,18 @@
             <h2>Protected Areas By State</h2>    
         </div>
         <div class="section1_charts">
-        <div id="chart2" class="section1_chart"></div>
-        <div id="chart3" class="section1_chart"></div>
-        <div id="chart4" class="section1_chart"></div>
+        <div class="section1_chart">
+            <h3>Number of Protected Areas by Jurisdiction</h3>
+            <div id="chart2" class="section1_chart"></div>
+        </div>
+        <div class="section1_chart">
+            <h3>Total Protected Area by State</h3>
+            <div id="chart3" class="section1_chart"></div>
+        </div>
+        <div class="section1_chart">
+            <h3>Protected Area vs Total Area by State</h3>
+            <div id="chart4" class="section1_chart"></div>
+        </div>
         </div>
         <script>
             vegaEmbed('#chart2', 'bar.json',{actions: false})
