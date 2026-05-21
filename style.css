@@ -68,7 +68,7 @@ body {
 }
 .section1_chart h3 {
   font-size: 22px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   text-align: center;
 }
 .section2 {
@@ -80,6 +80,17 @@ margin-bottom: 20px;
   font-size: 42px;
   text-align: center;
   color: black;
+}
+.section2_charts {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  padding: 0 40px;
+}
+.section2_chart h3 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  text-align: center;
 }
   /*FOOTER */
   

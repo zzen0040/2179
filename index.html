@@ -52,7 +52,23 @@
         <div class="section2">
             <h2>Classification and Governance of Protected Areas</h2>    
         </div>
+        <div class="section2_charts">
+        <div class="section2_chart">
+            <h3>Number of Protected Areas by Jurisdiction</h3>
+            <div id="chart5" class="section2_chart"></div>
+        </div>
+        <div class="section2_chart">
+            <h3>Protected Area Governance Structure</h3>
+            <div id="chart6" class="section2_chart"></div>
+        </div>
+        </div>
+        <script>
+            vegaEmbed('#chart5', 'dot.json',{actions: false})
+            vegaEmbed('#chart6', 'treemap.json',{actions: false})
+        </script>
+
     </section>
+
     </div>
 </body>
 </html>

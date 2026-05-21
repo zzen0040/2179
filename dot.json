@@ -1,47 +1,53 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-  
-    "width": 700,
-    "height": 500,
-  
+    "width": 600,
+    "height": 400,
     "data": {
       "url": "data/IBRA.csv"
     },
-  
+    "transform": [
+      {"filter": "datum['1'] != 'Total'"},
+      {
+        "calculate": "toNumber(replace(datum['5'], /,/g, ''))",
+        "as": "ibra_area"
+      },
+      {
+        "calculate": "toNumber(replace(datum['6'], /,/g, ''))",
+        "as": "protected_area"
+      }
+    ],
     "mark": {
       "type": "point",
       "filled": true,
       "opacity": 0.7
     },
-  
     "encoding": {
-  
       "x": {
         "field": "7",
-        "type": "quantitative"
+        "type": "quantitative",
+        "title": "% IBRA Region Protected"
       },
-  
       "y": {
-        "field": "6",
-        "type": "quantitative"
+        "field": "protected_area",
+        "type": "quantitative",
+        "title": "Area Protected (ha)"
       },
-  
       "size": {
-        "field": "5",
-        "type": "quantitative"
+        "field": "ibra_area",
+        "type": "quantitative",
+        "title": "IBRA Area (ha)"
       },
-  
       "color": {
         "field": "3",
-        "type": "nominal"
+        "type": "nominal",
+        "title": "Jurisdiction"
       },
-  
       "tooltip": [
-        {"field": "1"},
-        {"field": "3"},
-        {"field": "7"},
-        {"field": "6"},
-        {"field": "5"}
+        {"field": "1", "title": "IBRA Region"},
+        {"field": "3", "title": "Jurisdiction"},
+        {"field": "7", "title": "Protected %"},
+        {"field": "protected_area", "title": "Protected Area"},
+        {"field": "ibra_area", "title": "IBRA Area"}
       ]
     }
   }
