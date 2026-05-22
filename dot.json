@@ -25,7 +25,7 @@
       "x": {
         "field": "7",
         "type": "quantitative",
-        "title": "% IBRA Region Protected"
+        "title": "% IBRA(Interim Biogeographic Regionalisation for Australia) Region Protected"
       },
       "y": {
         "field": "protected_area",
