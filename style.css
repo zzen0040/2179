@@ -1,11 +1,17 @@
 /*BODY*/
 
 body {
-    font-family: "Cinzel",serif;
-    background-color: #f7f3eb;
+    font-family:  "Cormorant Garamond", serif;
+    color:#5A3B2E;
+    background-color: #e5dbc7;
     margin: 0;
   }
 
+.page {
+    max-width: 1800px;
+    margin: 0 auto;
+    background-color: #f7f3eb;
+}
   
   /*TITLE*/
   

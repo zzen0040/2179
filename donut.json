@@ -1,0 +1,55 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "description": "A simple donut chart with embedded data.",
+    "width": 400,
+    "height": 400,
+    "data": {
+      "values": [
+        {"Governance":"Community","Contribution":49.48},
+        {"Governance":"Government","Contribution":38.32},
+        {"Governance":"Joint","Contribution":6.06},
+        {"Governance":"Private","Contribution":6.14}
+        ]
+    },
+    "layer":[
+    {
+    "mark": {"type": "arc", "innerRadius": 50,"outerRadius":80},
+    "encoding": {
+      "theta": {"field": "Contribution", "type": "quantitative"},
+      "color": {"field": "Governance", "type": "nominal"}
+        }
+    },
+    {
+        "transform": [{"filter": "datum.Governance == 'Community'"}],
+        "mark": {"type":"arc", "innerRadius":100, "outerRadius":120, "cornerRadius":4},
+        "encoding": {
+          "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
+          "color": {"value":"#4C78A8"}
+        }
+        },
+    {
+        "transform": [{"filter": "datum.Governance == 'Government'"}],
+        "mark": {"type":"arc", "innerRadius":125, "outerRadius":145, "cornerRadius":4},
+        "encoding": {
+          "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
+          "color": {"value":"#F58518"}
+        }
+        },
+        {
+            "transform": [{"filter": "datum.Governance == 'Joint'"}],
+            "mark": {"type":"arc", "innerRadius":175, "outerRadius":195, "cornerRadius":4},
+            "encoding": {
+              "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
+              "color": {"value":"#E45756"}
+            }
+        },
+        {
+            "transform": [{"filter": "datum.Governance == 'Private'"}],
+            "mark": {"type":"arc", "innerRadius":150, "outerRadius":170, "cornerRadius":4},
+            "encoding": {
+              "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
+              "color": {"value":"#72B7B2"}
+            }
+        }
+    ]
+  }
