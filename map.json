@@ -1,0 +1,66 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 600,
+    "height": 300,
+    "projection": {
+      "type": "mercator"
+    },
+    "layer":[
+    {
+    "data": {
+      "url": "data/STE_2021_AUST_GDA2020.json",
+      "format": {
+        "type": "topojson",
+        "feature": "STE_2021_AUST_GDA2020"
+      }
+    },
+    "transform": [{
+      "lookup": "properties.STE_NAME21",
+      "from": {
+        "data": {
+          "url": "data/koala.csv"
+        },
+        "key": "State",
+        "fields": ["Count"]
+        }
+        }
+    ],
+    
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Koala Occurrence Records"
+      }
+    }
+    },
+    {
+        "data": {
+          "url": "data/protected_count.csv"
+        },
+  
+        "mark": {
+          "type": "circle",
+          "color": "black",
+          "opacity": 0.9
+        },
+        "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "size": {
+        "field": "Protected_Count",
+        "type": "quantitative",
+        "title": "Number of Protected Areas",
+        "scale": {"range": [20, 800]}
+        },
+        "tooltip": [
+        {"field": "State"},
+        {"field": "Protected_Count"}
+        ]
+    }
+      }
+  
+    ]
+  }
+
