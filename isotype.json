@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "config": {"view": {"stroke": ""}},
+    "width": 500,
+    "height": 200,
+    "data": {"url":"data/species-list.csv"},
+    "transform": [
+    {
+        "filter": "indexof(['Mammalia', 'Aves', 'Reptilia', 'Amphibia'], datum.class) >= 0"
+    },
+    {
+        "filter": "indexof(['Vulnerable', 'Endangered', 'Critically Endangered'], datum.status) >= 0"
+    },
+    {
+        "calculate": "{'Mammalia': '🐨', 'Aves': '🐦‍⬛', 'Reptilia': '🦎', 'Amphibia': '🐸'}[datum.class]",
+        "as": "emoji"
+      },
+      {"window": [{"op": "rank", "as": "rank"}], "groupby": ["status", "class"]},
+      {"calculate": "floor((datum.rank - 1) / 5)","as": "new_rank"}
+    ],
+    "mark": {"type": "text", "baseline": "middle"},
+    "encoding": {
+      "x": {"field": "new_rank", "type": "ordinal", "axis": null},
+      "y": {"field": "class", "type": "nominal", "axis": null, "sort":["Mammalia", "Aves", "Reptilia", "Amphibia"]},
+      "row": {"field": "status", "header": {"title": "KAKA"},"sort":["Vulnerable", "Endangered", "Critically Endangered"]},
+      "text": {"field": "emoji", "type": "nominal"},
+      "size": {"value": 30}
+    }
+  }
+  
