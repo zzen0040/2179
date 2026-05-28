@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
     "background": "#fcfaf6",
-    "width":400,
-    "height":420,
+    "width":250,
+    "height":250,
     "description": "Dot plot of total protected area by state",
     "data": {"values": [
       {"Jurisdiction": "ACT", "ProtectedArea": 40657, "icon": "🌳"},

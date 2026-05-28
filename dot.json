@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-    "width": 600,
+    "width": 500,
     "height": 400,
+    "background": "#fcfaf6",
     "data": {
       "url": "data/IBRA.csv"
     },

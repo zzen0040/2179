@@ -13,9 +13,6 @@
     <div class="title">
         <h1>Australian terrestrial Protected Areas</h1>
     </div>
-    <div class="hero">
-    <img src="forest.jpg" class="image">   
-    </div>
 
     <section class="section">
         <div class="section_back">
@@ -28,8 +25,13 @@
         </div>
         <div class="section_charts">
         <div class="section_chart">
-        <h3>Distribution map of protected areas in Australia</h3>
+        <div class="s_title_block">
+            <h3>Distribution map of protected areas in Australia</h3>
+        <div class="s_title_line"></div>
+        </div>
+        <div class="idiom_card">
         <div id="chart1"></div>
+        </div>
         </div>
         </div>
     <script>
@@ -39,21 +41,28 @@
 
 
     <section class="section1">
-        <div class="section1">
-            <h2>Protected Areas By State</h2>    
-        </div>
+            <div class="s1_title_block">
+                <h2>Protected Areas By State</h2>
+                <div class="s1_title_line"></div>
+            </div>
         <div class="section1_charts">
         <div class="section1_chart">
             <h3>Number of Protected Areas by Jurisdiction</h3>
+            <div class="idiom_card1">
             <div id="chart2" class="section1_chart"></div>
+            </div>
         </div>
         <div class="section1_chart">
             <h3>Total Protected Area by State</h3>
+            <div class="idiom_card1">
             <div id="chart3" class="section1_chart"></div>
+            </div>
         </div>
         <div class="section1_chart">
             <h3>Protected Area vs Total Area by State</h3>
+            <div class="idiom_card1">
             <div id="chart4" class="section1_chart"></div>
+            </div>
         </div>
         </div>
         <script>
@@ -64,25 +73,57 @@
     </section>
     
     <section class="section2">
-        <div class="section2">
-            <h2>Protected Area Coverage and Governance</h2>    
-        </div>
+        <div class="s2_title_block">
+            <h2>Protected Area Coverage and Governance</h2>  
+            <div class="s2_title_line"></div>
+        </div>  
         <div class="section2_charts">
         <div class="section2_chart">
             <h3>Protected Area Coverage across Australia IBRA Regions</h3>
+            <div class="idiom_card1">
             <div id="chart5" class="section2_chart"></div>
+            </div>
         </div>
         <div class="section2_chart">
             <h3>Protected Area Governance Structure</h3>
+            <div class="idiom_card1">
             <div id="chart6" class="section2_chart"></div>
+            </div>
         </div>
         </div>
         <script>
             vegaEmbed('#chart5', 'dot.json',{actions: false})
-            vegaEmbed('#chart6', 'treemap.json',{actions: false})
+            vegaEmbed('#chart6', 'donut.json',{actions: false})
         </script>
 
     </section>
+
+    <section class="section3">
+        <div class="s3_title_block">
+            <h2>The connection between protected areas and animals</h2>  
+            <div class="s3_title_line"></div>
+        </div>  
+        <div class="section3_charts">
+        <div class="section3_chart">
+            <h3>Protected Area Coverage across Australia IBRA Regions</h3>
+            <div class="idiom_card1">
+            <div id="chart7" class="section3_chart"></div>
+            </div>
+        </div>
+        <div class="section3_chart">
+            <h3>Protected Area Governance Structure</h3>
+            <div class="idiom_card1">
+            <div id="chart8" class="section3_chart"></div>
+            </div>
+        </div>
+        </div>
+        <script>
+            vegaEmbed('#chart7', 'isotype.json',{actions: false})
+            vegaEmbed('#chart8', 'map.json',{actions: false})
+        </script>
+    </section>
+
+
     <footer class="footer">
         <p>
             Data Source: Collaborative Australian Protected Areas Database (CAPAD) 2024

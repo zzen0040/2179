@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-    "width": 600,
-    "height": 300,
+    "width": 520,
+    "height": 520,
+    "background": "#fcfaf6",
     "projection": {
       "type": "mercator"
     },
@@ -31,8 +32,17 @@
       "color": {
         "field": "Count",
         "type": "quantitative",
-        "title": "Koala Occurrence Records"
-      }
+        "title": "Koala Occurrence Records",
+        "scale": {
+        "type": "log",
+        "range": [
+        "#F6F1DE",
+        "#C9D8B6",
+        "#7CA982",
+        "#386641"
+        ]
+        } 
+    }
     }
     },
     {
@@ -43,7 +53,7 @@
         "mark": {
           "type": "circle",
           "color": "black",
-          "opacity": 0.9
+          "opacity": 0.6
         },
         "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},

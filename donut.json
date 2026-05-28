@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "background": "#fcfaf6",
     "description": "A simple donut chart with embedded data.",
     "width": 400,
     "height": 400,
