@@ -1,0 +1,121 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 500,
+    "height": 500,
+    "background": "#fcfaf6",
+    "data": {"url": "data/year.csv"},
+
+    "transform": [
+    {"filter": "datum.Year >= 1950"}
+    ],
+    "layer": [
+    {
+    "mark": {
+      "type": "line",
+      "interpolate": "step-after",
+      "strokeWidth": 3,
+      "color": "#386641"
+    },
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "quantitative",
+        "axis": {"values": [1950,1960,1970,1980,1990,2000,2010,2020],"gridOpacity": 0.3}
+      },
+      "y": {
+        "field": "Cumulative",
+        "type": "quantitative",
+        "title": "Cumulative Protected Areas"
+      },
+      "tooltip": [
+        {"field": "Year"},
+        {"field": "Cumulative"}
+        ]
+    }
+    },
+    {
+        "data": {
+          "values": [
+            {"y": 2844}
+          ]
+        },
+      
+        "mark": {
+          "type": "rule",
+          "color": "red",
+          "strokeWidth": 2,
+          "strokeDash":[4.4]
+        },
+      
+        "encoding": {
+          "y": {
+            "field": "y",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {"y": 3510}
+          ]
+        },
+      
+        "mark": {
+          "type": "rule",
+          "color": "red",
+          "strokeWidth": 2,
+          "strokeDash":[4.4]
+        },
+      
+        "encoding": {
+          "y": {
+            "field": "y",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {"y": 11932}
+          ]
+        },
+      
+        "mark": {
+          "type": "rule",
+          "color": "red",
+          "strokeWidth": 2,
+          "strokeDash":[4.4]
+        },
+      
+        "encoding": {
+          "y": {
+            "field": "y",
+            "type": "quantitative"
+          }
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {"y": 12662}
+          ]
+        },
+      
+        "mark": {
+          "type": "rule",
+          "color": "red",
+          "strokeWidth": 2,
+          "strokeDash":[4.4]
+        },
+      
+        "encoding": {
+          "y": {
+            "field": "y",
+            "type": "quantitative"
+          }
+        }
+      }
+    ]
+  }

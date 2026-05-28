@@ -105,13 +105,13 @@
         </div>  
         <div class="section3_charts">
         <div class="section3_chart">
-            <h3>Protected Area Coverage across Australia IBRA Regions</h3>
+            <h3>Threatened Species Status by Animal Group(1 emoji = 10 species)</h3>
             <div class="idiom_card1">
             <div id="chart7" class="section3_chart"></div>
             </div>
         </div>
         <div class="section3_chart">
-            <h3>Protected Area Governance Structure</h3>
+            <h3>Ghost Bat Records and Major Protected Areas</h3>
             <div class="idiom_card1">
             <div id="chart8" class="section3_chart"></div>
             </div>
@@ -119,7 +119,32 @@
         </div>
         <script>
             vegaEmbed('#chart7', 'isotype.json',{actions: false})
-            vegaEmbed('#chart8', 'map.json',{actions: false})
+            vegaEmbed('#chart8', 'overlap_map.json',{actions: false})
+        </script>
+    </section>
+
+    <section class="section4">
+        <div class="s4_title_block">
+            <h2>The connection between protected areas and animals</h2>  
+            <div class="s4_title_line"></div>
+        </div>  
+        <div class="section4_charts">
+        <div class="section4_chart">
+            <h3>Threatened Species Status by Animal Group</h3>
+            <div class="idiom_card1">
+            <div id="chart9" class="section4_chart"></div>
+            </div>
+        </div>
+        <div class="section4_chart">
+            <h3>Ghost Bat Records and Major Protected Areas</h3>
+            <div class="idiom_card1">
+            <div id="chart10" class="section4_chart"></div>
+            </div>
+        </div>
+        </div>
+        <script>
+            vegaEmbed('#chart9', 'step.json',{actions: false})
+            vegaEmbed('#chart10', 'overlap_map.json',{actions: false})
         </script>
     </section>
 

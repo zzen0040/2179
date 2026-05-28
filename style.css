@@ -201,6 +201,39 @@
     margin-bottom: 10px;
     text-align: center;
     }
+    
+    
+    .section4 {
+      margin-top: 20px;
+      margin-bottom: 100px;
+      }
+      .section4 h2 {
+      margin-bottom: 20px;
+      font-size: 30px;
+      color:#5A3B2E;
+      margin-left: 40px;
+      }
+      .s4_title_block {
+        display: inline-block;
+      }
+      .s4_title_line {
+        width: 1000px;
+        height: 4px;
+        background: linear-gradient(to right, #ff5e00, #ffb347);
+        margin-top: 10px;
+        margin-left: 40px;
+      }
+      .section4_charts {
+      display: flex;
+      gap: 100px;
+      justify-content: center;
+      padding: 0 40px;
+      }
+      .section4_chart h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      text-align: center;
+      }
 
   /*FOOTER */
   

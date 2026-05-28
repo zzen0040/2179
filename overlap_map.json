@@ -1,0 +1,111 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 520,
+    "height": 520,
+    "background": "#fcfaf6",
+    "projection": {
+      "type": "mercator"
+    },
+    "layer": [
+      {
+        "data": {
+          "url": "data/STE_2021_AUST_GDA2020.json",
+          "format": {
+            "type": "topojson",
+            "feature": "STE_2021_AUST_GDA2020"
+          }
+        },
+        "projection": {
+          "type": "mercator"
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "#EFE8DC",
+          "stroke": "#888888",
+          "strokeWidth": 0.6
+        }
+      },
+      {
+        "data": {
+          "url": "data/Collaborative_Australian_Protected_Areas_Database_(CAPAD)_2024_-_Terrestrial__.csv"
+        }, 
+        "transform": [
+          {"filter": "datum.STATE != 'EXT' && datum.STATE != 'JBT'"},
+          {"filter": "datum.GIS_AREA > 10000"}
+        ],
+        "projection": {
+          "type": "mercator"
+        },
+        "mark": "circle",
+        "encoding": {
+          "longitude": {
+            "field": "LONGITUDE",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "LATITUDE",
+            "type": "quantitative"
+          },
+          "tooltip": [
+          {
+          "field": "NAME",
+          "type": "nominal",
+          "title": "Name"
+          },
+          {
+          "field": "STATE",
+          "type": "nominal",
+          "title": "State"
+          }
+          ],
+          "size": {"field": "GIS_AREA",
+                   "type": "quantitative",
+                   "legend": null,
+                   "scale": {
+                    "range": [10,500]
+                   },
+                    "title": "Protected Area Size"           
+                },
+          "color": {"value": "#386641"}
+        }
+      },
+      {
+        "data": {
+          "url": "data/Bat.csv"
+        },
+        "transform": [
+        {
+        "filter": "datum.decimalLongitude > 110 && datum.decimalLongitude < 155"
+        },
+        {
+        "filter": "datum.decimalLatitude > -45 && datum.decimalLatitude < -10"
+        }
+        ],
+        "mark": {
+          "type": "text",
+          "text": "🦇",
+          "opacity": 1,
+          "size": 8
+        },
+      
+        "encoding": {
+          "longitude": {
+            "field": "decimalLongitude",
+            "type": "quantitative"
+          },
+      
+          "latitude": {
+            "field": "decimalLatitude",
+            "type": "quantitative"
+          },
+      
+          "tooltip": [
+            {
+              "field": "stateProvince",
+              "title": "State"
+            }
+          ]
+        }
+      }
+    ]
+  }
