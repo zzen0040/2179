@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
     "width": 500,
-    "height": 500,
+    "height": 350,
     "background": "#fcfaf6",
     "data": {"url": "data/year.csv"},
 

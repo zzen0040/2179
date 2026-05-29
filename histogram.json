@@ -1,0 +1,30 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 550,
+    "height": 350,
+    "background": "#fcfaf6",
+    "data": {"url": "data/subregions.csv"},
+    "mark": {"type":"bar","color": "#7CA982"},
+    "encoding": {
+      "x": {
+        "bin": true,
+        "field": "% IBRA Subregion Protected",
+        "type": "quantitative",
+        "title": "Protected Area Coverage (%)"
+      },
+      "y": {"aggregate": "count","title": "Number of Subregions"},
+      "tooltip": [
+        {
+        "field": "% IBRA Subregion Protected",
+        "bin": true,
+        "title": "Protected Area Coverage Range (%)"
+        },
+        {
+        "aggregate": "count",
+        "type": "quantitative",
+        "title": "Number of Subregion"
+        }
+    ]
+    }
+  }
+  
