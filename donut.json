@@ -17,7 +17,11 @@
     "mark": {"type": "arc", "innerRadius": 50,"outerRadius":80},
     "encoding": {
       "theta": {"field": "Contribution", "type": "quantitative"},
-      "color": {"field": "Governance", "type": "nominal"}
+      "color": {"field": "Governance", "type": "nominal"},
+      "tooltip": [
+          {"field": "Governance", "title": "Governance"},
+          {"field": "Contribution", "title": "Protected Area (%)"}
+        ]
         }
     },
     {
@@ -38,7 +42,7 @@
         },
         {
             "transform": [{"filter": "datum.Governance == 'Joint'"}],
-            "mark": {"type":"arc", "innerRadius":175, "outerRadius":195, "cornerRadius":4},
+            "mark": {"type":"arc", "innerRadius":150, "outerRadius":170, "cornerRadius":4},
             "encoding": {
               "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
               "color": {"value":"#E45756"}
@@ -46,7 +50,7 @@
         },
         {
             "transform": [{"filter": "datum.Governance == 'Private'"}],
-            "mark": {"type":"arc", "innerRadius":150, "outerRadius":170, "cornerRadius":4},
+            "mark": {"type":"arc", "innerRadius":175, "outerRadius":195, "cornerRadius":4},
             "encoding": {
               "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
               "color": {"value":"#72B7B2"}

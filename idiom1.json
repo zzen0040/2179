@@ -17,7 +17,7 @@
         },
         "mark": {
           "type": "geoshape",
-          "fill": "white",
+          "fill": "#EFE8DC",
           "stroke": "#888888",
           "strokeWidth": 0.6
         }
@@ -55,7 +55,7 @@
           }
           ],
           "size": {"value": 3},
-          "color": {"value": "#c0392b"}
+          "color": {"value": "green"}
         }
       }
     ]
