@@ -3,8 +3,8 @@
 <head>
     <title>Website</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
@@ -115,10 +115,28 @@
             </p>
             </div>
         </div>
+        <div class="section2_chart">
+            <h3>Top 10 IBRA Bioregions by Protected Area Coverage</h3>
+            <div class="idiom_card1">
+            <div id="chart13" class="section2_chart"></div>
+             <p>
+                Note:The International Union for Conservation of Nature classifies protected areas 
+                based on its management objectives. Classes Ia and Ib focus on strict protection, 
+                while Classes V and VI promote interaction between humans and nature through sustainable 
+                utilization and management.
+            </p>
+            <p>
+                category VI covers the major bioregions in Australia, 
+                especially the desert areas, while the more stringent conservation categories(la-lb) 
+                only occupy a very small area.               
+            </p>
+            </div>
+        </div>
         </div>
         <script>
             vegaEmbed('#chart5', 'dot.json',{actions: false})
             vegaEmbed('#chart6', 'donut.json',{actions: false})
+            vegaEmbed('#chart13', 'heatmap.json',{actions: false})
         </script>
 
     </section>
@@ -132,16 +150,13 @@
         <div class="section3_chart">
             <h3>Threatened Species Status by Animal Group</h3>
             <div class="idiom_card1">
-            <div class="isotype_con">
             <div id="chart7" class="section3_chart"></div>
-            <div id="chart11" class="section3_chart"></div>
-            <div id="chart12" class="section3_chart"></div>
+
             <p>
-                Note: Each emoji represents approximately 10 species. Exact species counts are shown on the right-hand side. 
-                Animal groups are represented by emojis: 🐨 Mammalia (Mammals), 🦅 Aves (Birds), 🦎 Reptilia (Reptiles), 
-                and 🐸 Amphibia (Amphibians).
+                As can be seen from the chart, Australia has a large number of threatened species, 
+                which are distributed among different animal groups. This reflects the richness of Australia's biodiversity 
+                and highlights the importance of improving the network of protected areas and protecting key habitats.
             </p>
-            </div>
             </div>
         </div>
         <div class="section3_chart">
@@ -168,9 +183,7 @@
         </div>
         </div>
         <script>
-            vegaEmbed('#chart7', 'isotype.json',{actions: false})
-            vegaEmbed('#chart11', 'isotype2.json',{actions: false})
-            vegaEmbed('#chart12', 'isotype3.json',{actions: false})
+            vegaEmbed('#chart7', 'stack_bar.json',{actions: false})
         </script>
         <script>
             vegaEmbed('#chart8', 'overlap_map.json',{actions: false})
@@ -187,6 +200,10 @@
             <h3>Growth of Protected Areas in Australia Over Time</h3>
             <div class="idiom_card1">
             <div id="chart9" class="section4_chart"></div>
+            <p>
+                Overall, from 1950 to 2024, new protected areas have been established every year. 
+                Among them, the number of protected areas increased the most during the periods of 1978-1979 and 2010-2011.
+            </p>
             </div>
         </div>
         <div class="section4_chart">
@@ -204,11 +221,52 @@
 
     <section class="section5">
         <div class="s5_title_block">
-            <h2>Reference</h2>  
+            <h2>Conclusion</h2>  
             <div class="s5_title_line"></div>
         </div>  
+        <p>
+        Australia has established a wide network of land protected areas, 
+        but there are significant differences in the number and scale of 
+        protected areas among states and territories. Different protected 
+        areas adopt diverse governance approaches, and the protection coverage 
+        rates of different ecological regions also vary. However, they all play significant roles in biodiversity conservation.<br>
+
+        However, there is still an imbalance in conservation effectiveness among different ecological regions, 
+        and the important habitats of some endangered species are still located outside protected areas. 
+        Although the number of protected areas in Australia continues to increase, the coverage rate of 
+        protected areas in many IBRA Subregions is still lower than the 30% coverage requirement set by 
+        Australia's "30 by 30" target.<br>
+
+        Therefore, future conservation efforts should not only continue to expand the network of protected 
+        areas but also pay more attention to the spatial layout and ecological representativeness of protected areas, 
+        in order to achieve more comprehensive and effective biodiversity conservation.<br>
+        </p>
     </section>
 
+    <section class="section6">
+        <div class="s6_title_block">
+            <h2>Reference</h2>  
+            <div class="s6_title_line"></div>
+        </div>
+        <p> link:
+            <a href="https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July%202016?OpenDocument" target="_blank">
+                https://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/1270.0.55.001July%202016?OpenDocument
+            </a>
+            <br>File Name:State and Territory (STE) ASGS Ed 2016 Digital Boundaries in ESRI Shapefile Format 
+        </p>
+        <p> link:
+            <a href="https://fed.dcceew.gov.au/datasets/ec356a872d8048459fe78fc80213dc70_0/explore?location=-40.711703%2C115.622969%2C3" target="_blank">
+                https://fed.dcceew.gov.au/datasets/ec356a872d8048459fe78fc80213dc70_0/explore?location=-40.711703%2C115.622969%2C3
+            </a>
+            <br>File Name:Collaborative Australian Protected Areas Database (CAPAD) 2024 - Terrestrial csv version
+        </p>
+        <p> link:
+            <a href="https://doi.ala.org.au/doi/10.26197/ala.7a7c2c6e-b20c-4bdc-bfcd-38d2dcb7e56d" target="_blank">
+                https://doi.ala.org.au/doi/10.26197/ala.7a7c2c6e-b20c-4bdc-bfcd-38d2dcb7e56d
+            </a>
+            <br>File Name:This dataset contains Ghost Bat occurrence records obtained from the Atlas of Living Australia (ALA).
+        </p>   
+    </section>
 
 
     <footer class="footer">

@@ -57,6 +57,44 @@
           "size": {"value": 3},
           "color": {"value": "green"}
         }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "longitude": 127.4269153,
+              "latitude": -25.12474574,
+              "label": "Ngaanyatjarra IPA"
+            }
+          ]
+        },
+        "mark": {
+          "type": "point",
+          "color": "orange",
+          "filled": true,
+          "size": 150
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "longitude": 132.4269153,
+              "latitude": -27.12474574,
+              "label": "Largest protected area"
+            }
+          ]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize":10,
+          "fontWeight": "bold"
+        },
+        "encoding": {
+          "longitude": {"field": "longitude"},
+          "latitude": {"field": "latitude"},
+          "text": {"field": "label"}
+        }
       }
     ]
   }

@@ -1,9 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
     "background": "#fcfaf6",
-    "description": "A simple donut chart with embedded data.",
-    "width": 400,
-    "height": 400,
+    "width": 250,
+    "height": 250,
     "data": {
       "values": [
         {"Governance":"Community","Contribution":49.48},
@@ -19,16 +18,16 @@
       "theta": {"field": "Contribution", "type": "quantitative"},
       "color": {"field": "Governance", "type": "nominal"},
       "tooltip": [
-          {"field": "Governance", "title": "Governance"},
-          {"field": "Contribution", "title": "Protected Area (%)"}
+          {"field": "Governance", "title": "Governance type"},
+          {"field": "Contribution", "title": "Share of Protected Areas (%)"}
         ]
         }
     },
     {
       "data": {
         "values": [
-          {"x": 160, "y": 250, "label": "6.06%"},
-          {"x": 270, "y": 200, "label": "49.48%"}
+          {"x": 90, "y": 180, "label": "6.06%"},
+          {"x": 195, "y": 140, "label": "49.48%"}
         ]
       },
       "mark": {
@@ -39,8 +38,8 @@
         "fontWeight": "bold"
       },
       "encoding": {
-        "x": {"field": "x", "type": "quantitative", "axis": null,"scale": {"domain": [0, 400]}},
-        "y": {"field": "y", "type": "quantitative", "axis": null,"scale": {"domain": [0, 400]}},
+        "x": {"field": "x", "type": "quantitative", "axis": null,"scale": {"domain": [0, 250]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null,"scale": {"domain": [0, 250]}},
         "text": {"field": "label"}
       }
     }

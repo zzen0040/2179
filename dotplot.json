@@ -3,7 +3,6 @@
     "background": "#fcfaf6",
     "width":250,
     "height":250,
-    "description": "Dot plot of total protected area by state",
     "layer":[
       {
     "data": {"values": [

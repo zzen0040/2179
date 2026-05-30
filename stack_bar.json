@@ -1,0 +1,33 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 500,
+    "height": 400,
+    "background": "#fcfaf6",
+    "data": {"url": "data/species-list.csv"},
+    "mark": {"type":"bar","size": 50},
+    "transform": [
+    {
+      "filter": "indexof(['Mammalia','Aves','Reptilia','Amphibia'], datum.class) >= 0"
+    },
+    {
+      "filter": "indexof(['Vulnerable','Endangered','Critically Endangered'], datum.status) >= 0"
+    },
+    {
+      "aggregate": [
+        {"op": "count", "as": "number"}
+      ],
+      "groupby": ["class", "status"]
+      }
+    ],
+    "encoding": {
+      "x": {"field":"number","type": "quantitative","title":"Number of Species"},
+      "y": {"field": "class","type": "nominal","title":"type of Species","sort": ["Mammalia", "Aves", "Reptilia", "Amphibia"]},
+      "color": {"field": "status","type": "nominal","scale": {"range": ["#C9D8B6", "#F2B880", "#C97C5D"]}},
+      "tooltip": [
+      {"field": "class", "title": "Animal Group"},
+      {"field": "status", "title": "Status"},
+      {"field": "number", "title": "Species number"}
+    ]
+    }
+
+  }

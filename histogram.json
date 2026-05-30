@@ -1,9 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-    "width": 550,
+    "width": 600,
     "height": 350,
     "background": "#fcfaf6",
     "data": {"url": "data/subregions.csv"},
+    "layer": [{
     "mark": {"type":"bar","color": "#7CA982"},
     "encoding": {
       "x": {
@@ -26,5 +27,83 @@
         }
     ]
     }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "x": 12,
+          "y": 200,
+          "x2": 30,
+          "y2": 200
+        }
+      ]
+    },
+    "mark": {
+      "type": "rule",
+      "strokeWidth": 2
+    },
+    "encoding": {
+      "x": {"field": "x","type": "quantitative","scale": {"domain": [0, 100]}},
+      "y": {"field": "y","type": "quantitative","scale": {"domain": [0, 220]}},
+      "x2": {"field": "x2"},
+      "y2": {"field": "y2"}
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "x": 12,
+          "y": 200
+        }
+      ]
+    },
+    "mark": {
+      "type": "point",
+      "shape": "triangle-left",
+      "size": 100,
+      "filled":true,
+      "color":"black"
+    },
+    "encoding": {
+      "x": {
+        "field": "x",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "y",
+        "type": "quantitative"}
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "x": 67,
+          "y": 200,
+          "label": "203 subregions remain poorly protected,with less than 10% coverage"
+        }
+      ]
+    },
+    "mark": {
+      "type": "text",
+      "fontSize": 12,
+      "fontWeight": "bold"
+      },
+     "encoding": {
+      "x": {
+        "field": "x",
+        "type": "quantitative"
+      },
+      "y": {
+        "field": "y",
+        "type": "quantitative"},
+      "text": {
+        "field": "label"
+      }
+    }
+  }
+]
   }
   

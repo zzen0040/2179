@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "width": 250,
+    "height": 250,
+    "background": "#fcfaf6",
+    "data": {"url": "data/bioregion.csv"},
+    "params": [{"name": "highlight", "select": "point"}],
+    "mark": {"type": "rect", "strokeWidth": 1.5},
+    "encoding": {
+      "y": {
+        "field": "Bioregion",
+        "type": "nominal",
+        "title": "IBRA Bioregion"
+      },
+      "x": {
+        "field": "IUCN_Category",
+        "type": "nominal",
+        "title": "IUCN Category"
+      },
+      "fill": {
+        "field": "ProtectedArea",
+        "type": "quantitative",
+        "title": "Protected Area (ha)",
+        "scale": {"range": ["#deebf7","#9ecae1","#6baed6","#3182bd","#08519c"]}},
+        "tooltip": [
+                {"field": "Bioregion", "title": "Bioregion"},
+                {"field": "IUCN_Category", "title": "IUCN Category"},
+                {"field": "ProtectedArea", "title": "Protected Area (ha)", "format": ","}
+            ],
+      "stroke": {
+        "condition": {
+          "param": "highlight",
+          "empty": false,
+          "value": "black"
+        },
+        "value": null
+      },
+      "opacity": {
+        "condition": {"param": "highlight", "value": 1},
+        "value": 0.5
+      }
+    },
+    "config": {
+      "scale": {
+        "bandPaddingInner": 0,
+        "bandPaddingOuter": 0
+      },
+      "view": {"step": 40},
+      "axis": {
+        "domain": false
+      }
+    }
+  }

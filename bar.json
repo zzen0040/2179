@@ -3,7 +3,6 @@
     "background": "#fcfaf6",
     "width":250,
     "height":250,
-    "description": "Bar chart with text labels. Set domain to make the frame cover the labels.",
     "data": {
      "values": [ 
     {"Jurisdiction":"ACT","Number":51},
