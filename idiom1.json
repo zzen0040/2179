@@ -63,26 +63,36 @@
           "values": [
             {
               "longitude": 127.4269153,
-              "latitude": -25.12474574,
-              "label": "Ngaanyatjarra IPA"
+              "latitude": -24.5474574,
+              "label": "Ngaanyatjarra"
             }
           ]
         },
         "mark": {
           "type": "point",
+          "shape": "triangle",
+           "angle": 180,
           "color": "orange",
           "filled": true,
           "size": 150
+        },
+        "encoding": {
+          "longitude": {"field": "longitude"},
+          "latitude": {"field": "latitude"}
         }
       },
       {
         "data": {
           "values": [
-            {
-              "longitude": 132.4269153,
-              "latitude": -27.12474574,
-              "label": "Largest protected area"
-            }
+            {"label":"WA","longitude":121.5,"latitude":-25.5},
+            {"label":"NT","longitude":133.5,"latitude":-19.5},
+            {"label":"SA","longitude":135.5,"latitude":-30.0},
+            {"label":"QLD","longitude":145.5,"latitude":-24.0},
+            {"label":"NSW","longitude":147.0,"latitude":-32.5},
+            {"label":"VIC","longitude":144.5,"latitude":-37.0},
+            {"label":"TAS","longitude":146.5,"latitude":-42.0},
+            {"label":"ACT","longitude":149.1,"latitude":-35.3},
+            {"label":"Largest protected area","longitude":127.4269153,"latitude":-23.82474574}
           ]
         },
         "mark": {
