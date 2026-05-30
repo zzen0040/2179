@@ -6,14 +6,14 @@
     "description": "A ranged dot plot that uses 'layer' to convey changing life expectancy for the five most populous countries (between 1955 and 2000).",
     "data": {
         "values": [
-            {"State": "ACT","TotalArea": 23.5815,"ProtectedArea": 13.1902},
-            {"State": "NSW","TotalArea": 8011.5007,"ProtectedArea": 836.5056},
-            {"State": "NT","TotalArea": 13477.9163,"ProtectedArea": 3320.8738},
-            {"State": "QLD","TotalArea": 17297.4215,"ProtectedArea": 1618.3153},
-            { "State": "SA","TotalArea": 9843.2191,"ProtectedArea": 2996.3518},
-            {"State": "TAS","TotalArea": 684.0139,"ProtectedArea": 292.8055},
-            {"State": "VIC","TotalArea": 2274.4373,"ProtectedArea": 402.3548},
-            {"State": "WA","TotalArea": 25270.1298,"ProtectedArea": 7867.4219}
+            {"State": "ACT","TotalArea": 2358.15,"ProtectedArea": 1319.02},
+            {"State": "NSW","TotalArea": 801150.07,"ProtectedArea": 83650.56},
+            {"State": "NT","TotalArea": 1347791.63,"ProtectedArea": 332087.38},
+            {"State": "QLD","TotalArea": 1729742.15,"ProtectedArea": 161831.53},
+            { "State": "SA","TotalArea": 984321.91,"ProtectedArea": 299635.18},
+            {"State": "TAS","TotalArea": 68401.39,"ProtectedArea": 29280.55},
+            {"State": "VIC","TotalArea": 227443.73,"ProtectedArea": 40235.48},
+            {"State": "WA","TotalArea": 2527012.98,"ProtectedArea": 786742.19}
         ]
     },
     "encoding": {
@@ -40,7 +40,7 @@
             "x": {
           "field": "ProtectedArea",
           "type": "quantitative",
-          "title": "Area (100 km²)"
+          "title": "Area (km²)"
           },
           "x2":{
               "field":"TotalArea"
@@ -94,7 +94,7 @@
           "data": {
             "values": [
               {
-                "x": 7867,
+                "x": 786700,
                 "y": "WA",
                 "label": "Protected Area"
               }
@@ -116,7 +116,7 @@
           "data": {
             "values": [
               {
-                "x": 25270,
+                "x": 2527000,
                 "y": "WA",
                 "label": "Total Area"
               }
@@ -138,7 +138,7 @@
           "data": {
             "values": [
               {
-                "x": 1618,
+                "x": 161800,
                 "y": "QLD",
                 "label": "Lowest Coverage"
               }
