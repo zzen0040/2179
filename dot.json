@@ -3,6 +3,9 @@
     "width": 500,
     "height": 400,
     "background": "#fcfaf6",
+    "layer": 
+    [
+      {
     "data": {
       "url": "data/IBRA.csv"
     },
@@ -20,13 +23,14 @@
     "mark": {
       "type": "point",
       "filled": true,
-      "opacity": 0.7
+      "opacity": 0.7,
+      "color":"Green"
     },
     "encoding": {
       "x": {
         "field": "7",
         "type": "quantitative",
-        "title": "% IBRA(Interim Biogeographic Regionalisation for Australia) Region Protected"
+        "title": "% IBRA Region Protected"
       },
       "y": {
         "field": "protected_area",
@@ -38,11 +42,6 @@
         "type": "quantitative",
         "title": "IBRA Area (ha)"
       },
-      "color": {
-        "field": "3",
-        "type": "nominal",
-        "title": "Jurisdiction"
-      },
       "tooltip": [
         {"field": "1", "title": "IBRA Region"},
         {"field": "3", "title": "Jurisdiction"},
@@ -51,4 +50,51 @@
         {"field": "ibra_area", "title": "IBRA Area"}
       ]
     }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "x": 49.92,
+          "y": 19709622,
+          "label": "Largest protected area"
+        }
+      ]
+    },
+    "mark": {
+      "type": "text",
+      "dx":75,
+      "fontSize": 12,
+      "fontWeight": "bold"
+    },
+    "encoding": {
+    "x": {"field": "x", "type": "quantitative"},
+    "y": {"field": "y", "type": "quantitative"},
+      "text": {"field": "label"}
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "x": 86.29,
+          "y": 1350554,
+          "label": "Highest protection rate"
+        }
+      ]
+    },
+    "mark": {
+      "type": "text",
+      "dy": 10,
+      "dx": 30,
+      "fontSize": 12,
+      "fontWeight": "bold"
+    },
+    "encoding": {
+    "x": {"field": "x", "type": "quantitative"},
+    "y": {"field": "y", "type": "quantitative"},
+      "text": {"field": "label"}
+    }
+  }
+  ]
   }

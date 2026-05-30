@@ -21,7 +21,11 @@
       "x": {"field": "Number", "type": "quantitative"},
     "color": {
     "field": "Jurisdiction",
-    "type": "nominal"
+    "type": "nominal",
+    "scale": {
+    "domain": ["ACT","NSW","NT","QLD","SA","TAS","VIC","WA"],
+    "range": ["#4C78A8","#F58518","#E45756","#72B7B2","#79706E","#EECA3B","#B279A2","#FF9DA6"]
+    }
     }
     },
     "layer": [{
@@ -36,6 +40,57 @@
       "encoding": {
         "text": {"field": "Number", "type": "quantitative"}
       }
-    }]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Jurisdiction": "VIC",
+            "Number": 4709,
+            "anotation": "Highest Number"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3,
+        "dy": -15,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"field": "Number"},
+        "y": {"field": "Jurisdiction"},
+        "text": {"field": "anotation"}
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "Jurisdiction": "ACT",
+            "Number": 51,
+            "anotation": "Lowest Number"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3,
+        "dy": -15,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"field": "Number"},
+        "y": {"field": "Jurisdiction"},
+        "text": {"field": "anotation"}
+      }
+    }
+    ]
   }
   

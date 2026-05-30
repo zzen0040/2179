@@ -116,6 +116,40 @@
             "type": "quantitative"
           }
         }
+      },
+      {
+        "data": {"values": [
+          {"Year": 1979, "value": 3500, "label": "Rapid growth stage from 1978-1979"}
+        ]},
+        "mark": {
+          "type": "text",
+          "fontSize": 12,
+          "fontWeight": "bold",
+          "dy": 8,
+          "dx": 110
+        },
+        "encoding": {
+          "x": {"field": "Year", "type": "quantitative"},
+          "y": {"field": "value", "type": "quantitative"},
+          "text": {"field": "label"}
+        }
+      },
+      {
+        "data": {"values": [
+          {"Year": 2010, "value": 11932, "label": "Rapid growth stage from 2010-2011"}
+        ]},
+        "mark": {
+          "type": "text",
+          "fontSize": 12,
+          "fontWeight": "bold",
+          "dy": -8,
+          "dx": -100
+        },
+        "encoding": {
+          "x": {"field": "Year", "type": "quantitative"},
+          "y": {"field": "value", "type": "quantitative"},
+          "text": {"field": "label"}
+        }
       }
     ]
   }

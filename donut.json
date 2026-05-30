@@ -25,36 +25,24 @@
         }
     },
     {
-        "transform": [{"filter": "datum.Governance == 'Community'"}],
-        "mark": {"type":"arc", "innerRadius":100, "outerRadius":120, "cornerRadius":4},
-        "encoding": {
-          "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
-          "color": {"value":"#4C78A8"}
-        }
-        },
-    {
-        "transform": [{"filter": "datum.Governance == 'Government'"}],
-        "mark": {"type":"arc", "innerRadius":125, "outerRadius":145, "cornerRadius":4},
-        "encoding": {
-          "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
-          "color": {"value":"#F58518"}
-        }
-        },
-        {
-            "transform": [{"filter": "datum.Governance == 'Joint'"}],
-            "mark": {"type":"arc", "innerRadius":150, "outerRadius":170, "cornerRadius":4},
-            "encoding": {
-              "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
-              "color": {"value":"#E45756"}
-            }
-        },
-        {
-            "transform": [{"filter": "datum.Governance == 'Private'"}],
-            "mark": {"type":"arc", "innerRadius":175, "outerRadius":195, "cornerRadius":4},
-            "encoding": {
-              "theta": {"field":"Contribution", "type":"quantitative", "scale":{"domain":[0,100]}},
-              "color": {"value":"#72B7B2"}
-            }
-        }
+      "data": {
+        "values": [
+          {"x": 160, "y": 250, "label": "6.06%"},
+          {"x": 270, "y": 200, "label": "49.48%"}
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative", "axis": null,"scale": {"domain": [0, 400]}},
+        "y": {"field": "y", "type": "quantitative", "axis": null,"scale": {"domain": [0, 400]}},
+        "text": {"field": "label"}
+      }
+    }
     ]
   }

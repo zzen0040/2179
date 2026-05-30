@@ -4,6 +4,8 @@
     "width":250,
     "height":250,
     "description": "Dot plot of total protected area by state",
+    "layer":[
+      {
     "data": {"values": [
       {"Jurisdiction": "ACT", "ProtectedArea": 406.57},
       {"Jurisdiction": "TAS", "ProtectedArea": 29280.55},
@@ -28,4 +30,54 @@
         {"field": "ProtectedArea", "type": "quantitative", "title": "Area (km²)"}
       ]
     }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "Jurisdiction": "ACT",
+          "ProtectedArea": 406.57,
+          "annotation": "Lowest Area 40(km²)"
+        }
+      ]
+    },
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "baseline": "middle",
+      "dx":9,
+      "fontSize": 11,
+      "fontWeight": "bold"
+    },
+    "encoding": {
+      "x": {"field": "ProtectedArea", "type": "quantitative"},
+      "y": {"field": "Jurisdiction","type": "nominal"},
+      "text": {"field": "annotation"}
+    }
+  },
+  {
+    "data": {
+      "values": [
+        {
+          "Jurisdiction": "WA",
+          "ProtectedArea": 786742.19,
+          "annotation": "biggest Area 786742.19(km²)"
+        }
+      ]
+    },
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "baseline": "middle",
+      "dx":-160,
+      "fontSize": 11,
+      "fontWeight": "bold"
+    },
+    "encoding": {
+      "x": {"field": "ProtectedArea", "type": "quantitative"},
+      "y": {"field": "Jurisdiction","type": "nominal"},
+      "text": {"field": "annotation"}
+    }
+  }
+  ]
   }

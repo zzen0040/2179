@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
-    "title": {"text": "Vulnerable species","fontSize": 15,"fontWeight": "bold"},
+    "title": {"text": "Endangered species","fontSize": 15,"fontWeight": "bold"},
     "background": "#fcfaf6",
     "config": {"view": {"stroke": ""}},
     "width": 400,
@@ -15,7 +15,7 @@
         "filter": "indexof(['Mammalia', 'Aves', 'Reptilia', 'Amphibia'], datum.class) >= 0"
     },
     {
-        "filter": " datum.status =='Vulnerable'"
+        "filter": " datum.status =='Endangered'"
     },
     {
         "calculate": "{'Mammalia': '🐨', 'Aves': '🦅', 'Reptilia': '🦎', 'Amphibia': '🐸'}[datum.class]",
@@ -59,7 +59,6 @@
       },
       "text": {"field": "label"}
     }
-  }
-  ]
-  }
-  
+    }
+    ]
+}

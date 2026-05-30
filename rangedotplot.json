@@ -40,7 +40,7 @@
             "x": {
           "field": "ProtectedArea",
           "type": "quantitative",
-          "title": "Area (10,000 km²)"
+          "title": "Area (100 km²)"
           },
           "x2":{
               "field":"TotalArea"
@@ -89,6 +89,73 @@
             {"field": "TotalArea", "type": "quantitative"}
           ]
         }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 7867,
+                "y": "WA",
+                "label": "Protected Area"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "dx":-40,
+            "fontSize": 10,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+          "x": {"field": "x", "type": "quantitative"},
+          "y": {"field": "y", "type": "nominal"},
+            "text": {"field": "label"}
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 25270,
+                "y": "WA",
+                "label": "Total Area"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "dx":30,
+            "fontSize": 10,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+          "x": {"field": "x", "type": "quantitative"},
+          "y": {"field": "y", "type": "nominal"},
+            "text": {"field": "label"}
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "x": 1618,
+                "y": "QLD",
+                "label": "Lowest Coverage"
+              }
+            ]
+          },
+          "mark": {
+            "type": "text",
+            "dy":-10,
+            "dx":60,
+            "fontSize": 10,
+            "fontWeight": "bold"
+          },
+          "encoding": {
+          "x": {"field": "x", "type": "quantitative"},
+          "y": {"field": "y", "type": "nominal"},
+            "text": {"field": "label"}
+          }
         }
       ]
     }

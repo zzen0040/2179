@@ -47,28 +47,33 @@
             </div>
         <div class="section1_charts">
         <div class="section1_chart">
-            <div class="chart_tro">
             <h3>Number of Protected Areas by Jurisdiction</h3>
-            <p>
-                The number of protected areas under the jurisdiction of different continents shows significant differences. 
-                Western Australia has a significantly higher number of protected areas than other State, 
-                while the number under the jurisdiction of Act and Nt is relatively small.
-            </p>
-            </div>
             <div class="idiom_card1">
             <div id="chart2" class="section1_chart"></div>
+            <p>
+                The number of protected areas under the jurisdiction of Victoria is the highest, 
+                while that under the jurisdiction of the Australian Capital Territory is the lowest.
+            </p>
             </div>
         </div>
         <div class="section1_chart">
             <h3>Total Protected Area by State</h3>
             <div class="idiom_card1">
             <div id="chart3" class="section1_chart"></div>
+            <p>
+                Western Australia has the largest protected area, 
+                while the Australian Capital Territory has the smallest protected area.
+            </p>
             </div>
         </div>
         <div class="section1_chart">
             <h3>Protected Area vs Total Area by State</h3>
             <div class="idiom_card1">
             <div id="chart4" class="section1_chart"></div>
+            <p>
+                Overall, the coverage rate of protected areas in the austrlian capital territory 
+                is the highest, accounting for approximately 56% of the total area, while in Queensland it is only about 9%.
+            </p>
             </div>
         </div>
         </div>
@@ -89,12 +94,25 @@
             <h3>Protected Area Coverage across Australia IBRA Regions</h3>
             <div class="idiom_card1">
             <div id="chart5" class="section2_chart"></div>
+            <p>
+                Note:IBRA (Interim Biogeographic Regionalisation for Australia) 
+                divides Australia into ecological regions based on biodiversity 
+                and environmental characteristics
+            </p>
+            <p>
+                The protection coverage rate varies greatly across different regions of IBRA. 
+                In some areas, the protection coverage rate exceeds 80%, but in most areas, it is below 20%
+            </p>
             </div>
         </div>
         <div class="section2_chart">
             <h3>Protected Area Governance Structure</h3>
             <div class="idiom_card1">
             <div id="chart6" class="section2_chart"></div>
+            <p>
+                The governance methods of protected areas in Australia can be classified into four types. 
+                49% of protected areas are governed by communities, while a few are privately or jointly governed.
+            </p>
             </div>
         </div>
         </div>
@@ -112,20 +130,49 @@
         </div>  
         <div class="section3_charts">
         <div class="section3_chart">
-            <h3>Threatened Species Status by Animal Group(1 emoji = 10 species)</h3>
+            <h3>Threatened Species Status by Animal Group</h3>
             <div class="idiom_card1">
+            <div class="isotype_con">
             <div id="chart7" class="section3_chart"></div>
+            <div id="chart11" class="section3_chart"></div>
+            <div id="chart12" class="section3_chart"></div>
+            <p>
+                Note: Each emoji represents approximately 10 species. Exact species counts are shown on the right-hand side. 
+                Animal groups are represented by emojis: 🐨 Mammalia (Mammals), 🦅 Aves (Birds), 🦎 Reptilia (Reptiles), 
+                and 🐸 Amphibia (Amphibians).
+            </p>
+            </div>
             </div>
         </div>
         <div class="section3_chart">
             <h3>Ghost Bat Records and Major Protected Areas</h3>
             <div class="idiom_card1">
             <div id="chart8" class="section3_chart"></div>
+            <p>
+                Note:Ghost Bat was chosen because it is one of the representative threatened animal in Australia. 
+                Its activity range covers most state of Australia, and its survival is highly dependent on specific habitats, 
+                such as caves, crevices and surrounding foraging areas. Therefore, using Ghost Bat as a case can more clearly 
+                analyze whether the protected area truly covers the key habitats, rather than just looking at the area of the 
+                protected area itself.
+            </p>
+            <p>
+                It can be seen from the figure that most of the habitats of Ghost Bat are distributed within the main protected areas, 
+                indicating that the existing protected areas have a good coverage effect on this species. 
+                However, there are still some habitats located outside the protected areas, 
+                indicating that the current protection network has not yet achieved full coverage. 
+                These areas may face a higher risk of habitat loss and ecological disturbance.
+
+
+            </p>
             </div>
         </div>
         </div>
         <script>
             vegaEmbed('#chart7', 'isotype.json',{actions: false})
+            vegaEmbed('#chart11', 'isotype2.json',{actions: false})
+            vegaEmbed('#chart12', 'isotype3.json',{actions: false})
+        </script>
+        <script>
             vegaEmbed('#chart8', 'overlap_map.json',{actions: false})
         </script>
     </section>
@@ -137,7 +184,7 @@
         </div>  
         <div class="section4_charts">
         <div class="section4_chart">
-            <h3>Threatened Species Status by Animal Group</h3>
+            <h3>Growth of Protected Areas in Australia Over Time</h3>
             <div class="idiom_card1">
             <div id="chart9" class="section4_chart"></div>
             </div>
