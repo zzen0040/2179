@@ -7,7 +7,7 @@
     [
       {
     "data": {
-      "url": "data/IBRA.csv"
+      "url": "https://raw.githubusercontent.com/zzen0040/2179/refs/heads/main/data/IBRA.csv"
     },
     "transform": [
       {"filter": "datum['1'] != 'Total'"},
