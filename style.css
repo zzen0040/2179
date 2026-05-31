@@ -13,10 +13,13 @@
     background-color: #f7f3eb;
   }
   .idiom_card {
-    background-color: #A9D3E9;
+    background-color: #fcfaf6;
     border-radius: 25px;
     overflow: hidden;
     padding: 10px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
   }
   .idiom_card1 {
     background-color: #fcfaf6;
@@ -77,6 +80,7 @@
   .section h2 {
     margin-bottom: 20px;
   }
+  
   .section_charts {
     display: flex;
   ;
@@ -90,10 +94,18 @@
     font-size: 30px;
     margin-bottom: 20px;
   }
+  .section_chart p {
+    margin-top: 10px;
+    font-family: 'Georgia', serif;
+    color: #7A665C;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 2.0;
+  }
   .s_title_block {
     margin-top: 0;
     display: inline-block;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   .s_title_line {
     width: 1000px;
@@ -124,6 +136,7 @@
   }
   .s1_title_block {
     display: inline-block;
+    margin-bottom: 30px;
   }
   
   .s1_title_line {
@@ -166,6 +179,7 @@
   }
   .s2_title_block {
     display: inline-block;
+    margin-bottom: 30px;
   }
   .s2_title_line {
     width: 1000px;
@@ -207,6 +221,7 @@
   }
     .s3_title_block {
       display: inline-block;
+      margin-bottom: 30px;
   }
   .s3_title_line {
       width: 1000px;
@@ -240,6 +255,7 @@
   }
   .s4_title_block {
         display: inline-block;
+        margin-bottom: 30px;
   }
   .s4_title_line {
         width: 1000px;
@@ -282,6 +298,7 @@
         }
   .s5_title_block {
    display: inline-block;
+   margin-bottom: 30px;
         }
   .s5_title_line {
    width: 1000px;
@@ -313,6 +330,7 @@
     }
   .s6_title_block {
     display: inline-block;
+    margin-bottom: 30px;
     }
   .s6_title_line {
     width: 1000px;

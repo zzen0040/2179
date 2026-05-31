@@ -35,7 +35,7 @@
       "y": {
         "field": "protected_area",
         "type": "quantitative",
-        "title": "Area Protected (ha)"
+        "title": "Protected Area (ha)"
       },
       "size": {
         "field": "ibra_area",

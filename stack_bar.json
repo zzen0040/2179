@@ -4,7 +4,6 @@
     "height": 400,
     "background": "#fcfaf6",
     "data": {"url": "data/species-list.csv"},
-    "mark": {"type":"bar","size": 50},
     "transform": [
     {
       "filter": "indexof(['Mammalia','Aves','Reptilia','Amphibia'], datum.class) >= 0"
@@ -13,15 +12,22 @@
       "filter": "indexof(['Vulnerable','Endangered','Critically Endangered'], datum.status) >= 0"
     },
     {
+      "calculate": "{'Mammalia':'Mammalia','Aves':'Aves(Birds)','Reptilia':'Reptilia','Amphibia':'Amphibia'}[datum.class]",
+      "as": "label"
+    },
+    {
       "aggregate": [
         {"op": "count", "as": "number"}
       ],
-      "groupby": ["class", "status"]
+      "groupby": ["class","label","status"]
       }
     ],
+    "layer":[
+      {
+    "mark": {"type":"bar","size": 50},
     "encoding": {
       "x": {"field":"number","type": "quantitative","title":"Number of Species"},
-      "y": {"field": "class","type": "nominal","title":"type of Species","sort": ["Mammalia", "Aves", "Reptilia", "Amphibia"]},
+      "y": {"field": "label","type": "nominal","title":"Animal Group","sort": ["Mammalia", "Aves(Birds)", "Reptilia", "Amphibia"]},
       "color": {"field": "status","type": "nominal","scale": {"range": ["#C9D8B6", "#F2B880", "#C97C5D"]}},
       "tooltip": [
       {"field": "class", "title": "Animal Group"},
@@ -29,5 +35,31 @@
       {"field": "number", "title": "Species number"}
     ]
     }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "x": 100,
+            "y": "Aves(Birds)",
+            "label": "Highest number of threatened species"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "black",
+        "dx": 270,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {"field": "x", "type": "quantitative"},
+        "y": {"field": "y", "type": "nominal"},
+        "text": {"field": "label"}
+      }
+    }
+  ]
 
   }
