@@ -3,7 +3,7 @@
     "width": 250,
     "height": 250,
     "background": "#fcfaf6",
-    "data": {"url": "data/bioregion.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/zzen0040/2179/refs/heads/main/data/bioregion.csv"},
     "params": [{"name": "highlight", "select": "point"}],
     "mark": {"type": "rect", "strokeWidth": 1.5},
     "encoding": {
