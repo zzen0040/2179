@@ -3,7 +3,7 @@
     "width": 600,
     "height": 350,
     "background": "#fcfaf6",
-    "data": {"url": "data/subregions.csv"},
+    "data": {"url": "https://raw.githubusercontent.com/zzen0040/2179/refs/heads/main/data/subregions.csv"},
     "layer": [{
     "mark": {"type":"bar","color": "#7CA982"},
     "encoding": {
