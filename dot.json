@@ -44,7 +44,7 @@
       },
       "tooltip": [
         {"field": "1", "title": "IBRA Region"},
-        {"field": "3", "title": "Jurisdiction"},
+        {"field": "3", "title": "State"},
         {"field": "7", "title": "Protected %"},
         {"field": "protected_area", "title": "Protected Area"},
         {"field": "ibra_area", "title": "IBRA Area"}

@@ -23,7 +23,7 @@
     },
     "encoding": {
       "x": {"field": "ProtectedArea", "type": "quantitative","axis": {"values": [0, 20000000, 40000000, 60000000, 80000000]},"title":"Area(ha)"},
-      "y": {"field": "Jurisdiction", "type": "nominal"},
+      "y": {"field": "Jurisdiction", "type": "nominal","title": "State"},
       "tooltip":[
         {"field": "Jurisdiction", "type": "nominal", "title": "State"},
         {"field": "ProtectedArea", "type": "quantitative", "title": "Area (ha)"}

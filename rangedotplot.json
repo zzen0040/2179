@@ -20,7 +20,7 @@
       "y": {
         "field": "State",
         "type": "nominal",
-        "title": "jurisdiction",
+        "title": "State",
         "axis": {
           "offset": 5,
           "ticks": false,

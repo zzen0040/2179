@@ -5,21 +5,21 @@
     "height":250,
     "data": {
      "values": [ 
-    {"Jurisdiction":"ACT","Number":51},
-    {"Jurisdiction":"NT","Number":84},
-    {"Jurisdiction":"QLD","Number":1230},
-    {"Jurisdiction":"TAS","Number":1721},
-    {"Jurisdiction":"WA","Number":1888},
-    {"Jurisdiction":"SA","Number":2085},
-    {"Jurisdiction":"NSW","Number":2657},
-    {"Jurisdiction":"VIC","Number":4709}
+    {"State":"ACT","Number":51},
+    {"State":"NT","Number":84},
+    {"State":"QLD","Number":1230},
+    {"State":"TAS","Number":1721},
+    {"State":"WA","Number":1888},
+    {"State":"SA","Number":2085},
+    {"State":"NSW","Number":2657},
+    {"State":"VIC","Number":4709}
   ]
     },
     "encoding": {
-      "y": {"field":"Jurisdiction","type":"nominal"},
+      "y": {"field":"State","type":"nominal"},
       "x": {"field": "Number", "type": "quantitative"},
     "color": {
-    "field": "Jurisdiction",
+    "field": "State",
     "type": "nominal",
     "scale": {
     "domain": ["ACT","NSW","NT","QLD","SA","TAS","VIC","WA"],
@@ -44,7 +44,7 @@
       "data": {
         "values": [
           {
-            "Jurisdiction": "VIC",
+            "State": "VIC",
             "Number": 4709,
             "anotation": "Highest Number"
           }
@@ -61,7 +61,7 @@
       },
       "encoding": {
         "x": {"field": "Number"},
-        "y": {"field": "Jurisdiction"},
+        "y": {"field": "State"},
         "text": {"field": "anotation"}
       }
     },
@@ -69,7 +69,7 @@
       "data": {
         "values": [
           {
-            "Jurisdiction": "ACT",
+            "State": "ACT",
             "Number": 51,
             "anotation": "Lowest Number"
           }
@@ -86,7 +86,7 @@
       },
       "encoding": {
         "x": {"field": "Number"},
-        "y": {"field": "Jurisdiction"},
+        "y": {"field": "State"},
         "text": {"field": "anotation"}
       }
     }
