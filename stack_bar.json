@@ -3,7 +3,7 @@
     "width": 500,
     "height": 400,
     "background": "#fcfaf6",
-    "data": {"url": "data/species-list.csv"},
+    "data": {"url": "https://github.com/zzen0040/2179/blob/main/data/species-list.csv"},
     "transform": [
     {
       "filter": "indexof(['Mammalia','Aves','Reptilia','Amphibia'], datum.class) >= 0"
